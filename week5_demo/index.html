@@ -15,7 +15,7 @@
 
     <h2>Form w/o Table</h2>
 
-    <form>
+    <form method="" action="">
         <!-- labels match with input elements -->
         <!-- for attribute of label matches name ttribute and id sttribute of input element -->
 
@@ -23,10 +23,43 @@
         <label for="firstName">First Name</label>
         <input type="text" name="firstName" id="firstName">
         <!-- LAST NAME -->
-
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName">
         <!-- EMAIL -->
-
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" required>
         <!-- SUBMIT BUTTON -->
+        <input type="submit" value="SUBMIT!">
+    </form>
+    <hr>
+
+    <h2>Form w/ Table</h2>
+
+    <form>
+        <table>
+            <tbody>
+                <tr>
+                    <td><label for="first">First Name:</label></td>
+                    <td><input type="text" name="first" id="first"></td>
+                </tr>
+                <tr>
+                    <td><label for="last">Last Name:</label></td>
+                    <td><input type="text" name="last" id="last"></td>
+                </tr>
+                <tr>
+                    <td><label for="email2">Email:</label></td>
+                    <td><input type="text" name="email2" id="email2"></td>
+                </tr>
+                <tr>
+                    <td><label for="comments">Comments</label></td>
+                    <td><textarea name="comments" id="comments" placeholder="Leave your comment here..."></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="SUBMIT!"></td>
+                </tr>
+            </tbody>
+        </table>
     </form>
 </body>
 </html>
