@@ -15,9 +15,9 @@
         var hRate = Number(prompt(`Enter your hourly pay `))
         var tRate = 0.2
 
-        var gross = (hRate * hWork)*2
-        var sShare = tRate * gross
-        var nPay = gross - sShare
+        var gross = ((hRate * hWork)*2).toFixed(2)
+        var sShare = (tRate * gross).toFixed(2)
+        var nPay = (gross - sShare).toFixed(2)
 
         console.log(`Gross Pay: $` + gross)
         console.log(`Sam's Share: $` + sShare)
