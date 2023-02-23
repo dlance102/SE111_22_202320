@@ -105,7 +105,39 @@
     <!--IN-DOCUMENT JAVASCRIPT BELOW-->
     <script>
         var body = document.querySelector(`body`)
+
         console.log(body)
+
+        var newP = ``
+        newP += `<p>`
+        newP += `hey`
+        newP += `<p>`
+
+            console.log(newP)
+
+            body.innerHTML += newP
+
+            console.log(body)
+
+            body.id = `main-body`
+            
+            console.log(body)
+
+            document.querySelector(`#enter-button`).addEventListener(`click`, alertInfo)
+
+            function alertInfo(e){
+                var fname = document.querySelector(`#first`).value
+                var lname = document.querySelector(`#last`).value
+                console.log(fname)
+                console.log(lname)
+
+                var age = Number(document.querySelector(`#age`).value)
+
+                console.log(fname, lname, age)
+
+                var full = fname + ` ` + lname
+                alert(`hey ${full}!`)
+            }
 	</script>
 	
 </body>
