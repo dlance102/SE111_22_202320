@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Lancellotti">
+    <meta name="description" content="Default HTML Page for SE 111">
+
+    <title>Pay Calculator</title>
+</head>
+<body>
+    <script>
+        var hWork = Number(prompt(`Enter hours of work per week: `))
+        var hRate = Number(prompt(`Enter your hourly pay `))
+        var tRate = 0.2
+
+        var gross = ((hRate * hWork)*2).toFixed(2)
+        var sShare = (tRate * gross).toFixed(2)
+        var nPay = (gross - sShare).toFixed(2)
+
+        console.log(`Gross Pay: $` + gross)
+        console.log(`Sam's Share: $` + sShare)
+        console.log(`Net Pay: $` + nPay)
+
+        alert(`Gross Pay: $` + gross + `\nSam's Share: $` + sShare + `\nNet Pay: $` + nPay)
+    </script>
+    <img src="images/valid.PNG">
+</body>
+</html>
