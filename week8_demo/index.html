@@ -42,6 +42,34 @@
         for(let index = 0; index < people.length; index++){
             console.log(`Index ${index}: ${people[index]}'s favorite color is ${color[index]}`)
         }
+
+        var associativePeople = []
+        associativePeopl[`first`] = `David`
+        associativePeopl[`last`] = `Lancellotti`
+        associativePeopl[`cat`] = `Kitty`
+
+        console.log(associtivePeople[`cat`])
+
+        //OBJECT
+
+        var person1 = {
+            first: `David`,
+            last: `Lancellotti`,
+            hasPets: true,
+            pets: {
+                cats: [`Kitty`]
+            },
+            greeting: function(){
+                alert(`Hi ${this.first} ${his.last}`)
+            }
+        }
+
+        console.log(person1)
+        console.log(person1.first)
+
+        for(let key in person1){
+            conolse.log(`${key}: ${person1[key]}`)
+        }
     </script>
 </body>
 </html>
