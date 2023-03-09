@@ -29,7 +29,7 @@
 				<td><input id="button" type="button" value="submit"></td>
 			</tr>
 		</table>
-	<div>
+	</div>
 	<div id="output">
 	
 	</div>
@@ -39,8 +39,8 @@
     <script>
 	
 		//Store the elements (tags) in variables
-		var first = document.querySelector(`first`)
-		var last = document.querySelector(`last`)
+		var fname = document.querySelector(`#first`).value
+		var lname = document.querySelector(`#last`).value
 
 		//Make an array to store the people
 		var people = []
@@ -72,7 +72,8 @@
 
             var person = {
 
-
+				first: fname,
+				last: lname
 
             }//end of person object
 
@@ -80,7 +81,7 @@
 
 
 			//Add the person object into the people array by using the .push() array method.
-			
+			people.push(person)
 
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
@@ -97,15 +98,15 @@
 			}//end of bubble sort algorithm!
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
-			
+			console.log(people)
 
 			//create a variable called 'output' that has an empty string value stored to 
-			
+			var output = ``
 
 			//Loop through the objects in the people array
-			for()
+			for(let i = 0; i < people.length; i++)
             {
-
+				
 				//Loop through each property in the object
 				for(key in people[i])
                 {
@@ -113,24 +114,23 @@
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
-				
+					key[0] = key[0].toUpperCase()
+					output = `First: ${people[i].first}\nLast: ${people[i].last}`
 
                 }
-                //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
-				
+                //add a <hr> to the output at the end of this outer loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
+				document.body.innerHTML += `<hr>`
 
 
 			}//end of loop going through people array to edit 'output'
 
 				//log the output string
+				console.log(output)
 				//replace the outputDiv's inner HTML with the output string
-				
-
-
-
+				document.querySelector(`#output`).innerHTML = output
 		}
 	
     </script>
-    
+    <img src="images/Screenshot 2023-03-09 150827.png">
 </body>
 </html>
